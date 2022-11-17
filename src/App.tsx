@@ -1,8 +1,11 @@
 import { Button, Menu } from 'antd';
 import { useNavigate } from 'react-router-dom';
+import { useAppContext } from './appContext';
 
 const App = () => {
   const navigate = useNavigate();
+  const { name } = useAppContext();
+  console.log('name', name);
   const items = [
     {
       label: <Button onClick={() => { navigate('/form-demo'); }} type="link">item 1</Button>,

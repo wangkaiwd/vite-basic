@@ -10,5 +10,15 @@ export default defineConfig({
         javascriptEnabled: true,
       },
     },
+  },
+  build: {
+    rollupOptions: {
+      manualChunks (id) {
+        const reg = /node_modules/;
+        if (reg.test(id)) {
+          return 'vendor';
+        }
+      }
+    }
   }
 });
