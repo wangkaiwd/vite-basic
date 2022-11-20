@@ -12,3 +12,11 @@ As a source code type-checker to find type problem ahead of time.
   * convert CommonJS or UMD dependencies into ESM first
 * Performance
   * converts ESM dependencies with many internal modules into a single module to improve subsequent page load performance
+
+extra:
+* [pnpm patch](https://pnpm.io/cli/patch)
+
+### effect of esbuild
+* dependencies pre-bundling 
+* compile ts and tsx file
+* minify code
