@@ -1,7 +1,10 @@
 import { Button, Menu } from 'antd';
 import { useNavigate } from 'react-router-dom';
 import { useAppContext } from './appContext';
+import { concat } from 'lodash-es';
 
+const x = concat([1], 2, [3], 4);
+console.log('x', x);
 const App = () => {
   const navigate = useNavigate();
   const { name } = useAppContext();
