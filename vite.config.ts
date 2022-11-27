@@ -14,10 +14,12 @@ export default defineConfig({
   },
   build: {
     rollupOptions: {
-      manualChunks (id) {
-        const reg = /node_modules/;
-        if (reg.test(id)) {
-          return 'vendor';
+      output: {
+        manualChunks: {
+          react: ['react'],
+          'react-dom': ['react-dom'],
+          antd: ['antd'],
+          '@ant-design/pro-components': ['@ant-design/pro-components'],
         }
       }
     }
