@@ -1,12 +1,13 @@
 import esbuild from 'esbuild';
 import path from 'node:path';
-import { fileURLToPath } from 'node:url';
+import {fileURLToPath} from 'node:url';
 import process from 'node:process';
+import envPlugin from "./plugins/envPlugin";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const resolveRelativeUrl = (filePath: string) => {
-  return path.resolve(__dirname, filePath);
+    return path.resolve(__dirname, filePath);
 };
 
 // esbuild
@@ -27,20 +28,22 @@ const resolveRelativeUrl = (filePath: string) => {
 //   });
 
 esbuild
-  .serve(
-    {
-      servedir: resolveRelativeUrl('./')
-    },
-    {
-      entryPoints: [resolveRelativeUrl('./index.ts')],
-      bundle: true,
-      write: true,
-      outdir: resolveRelativeUrl('./dist')
+    .serve(
+        {
+            servedir: resolveRelativeUrl('./')
+        },
+        {
+            entryPoints: [resolveRelativeUrl('./index.ts')],
+            plugins: [envPlugin],
+            bundle: true,
+            write: true,
+            outdir: resolveRelativeUrl('./dist')
+        }
+    )
+    .then((server) => {
+        console.log(`server is listening on http://localhost:${server.port}`);
     })
-  .then((server) => {
-    console.log(`server is listening on http://localhost:${server.port}`);
-  })
-  .catch((err) => {
-    console.error(err);
-    process.exit(0);
-  });
+    .catch((err) => {
+        console.error(err);
+        process.exit(0);
+    });
