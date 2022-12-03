@@ -1,9 +1,11 @@
+import {Button} from 'antd';
+
 const Others = () => {
-  return (
-    <div>
-      Others
-    </div>
-  );
+	return (
+		<div>
+			<Button type={'primary'}>click</Button>
+		</div>
+	);
 };
 
 export default Others;
