@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "composite": true,
+    "strict": true,
     "module": "ESNext",
     "resolveJsonModule": true,
     "lib": [
@@ -11,6 +12,7 @@
   },
   "include": [
     "vite.config.ts",
+    "config/**/*",
     "package.json"
   ]
 }
