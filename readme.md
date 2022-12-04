@@ -1,1 +1,6 @@
-## Vite Start template
+## Vite Basic
+
+vite:
+
+* esbuild
+* rollup
