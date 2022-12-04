@@ -8,7 +8,7 @@ const envPlugin: Plugin = {
 		// namespace to reserve them for this plugin.
 		build.onResolve({filter: /^env$/}, args => ({
 			path: args.path,
-			namespace: 'env-ns',
+			// namespace: 'env-ns',
 		}));
 
 		// Load paths tagged with the "env-ns" namespace and behave as if
