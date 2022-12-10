@@ -4,12 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rollup -c rollup.config.ts --configPlugin typescript"
   },
+  "type": "module",
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "rollup": "^3.5.1"
+  },
+  "devDependencies": {
+    "@rollup/plugin-typescript": "^10.0.1",
+    "tslib": "^2.4.1"
   }
 }
