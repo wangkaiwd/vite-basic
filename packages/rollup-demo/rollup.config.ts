@@ -1,5 +1,6 @@
 import {defineConfig} from 'rollup';
 import typescript from '@rollup/plugin-typescript';
+import myExample from './plugins/simple-plugin';
 
 export default defineConfig({
 	input: ['./index.ts'],
@@ -8,6 +9,7 @@ export default defineConfig({
 		format: 'es'
 	},
 	plugins: [
-		typescript()
+		typescript(),
+		myExample()
 	]
 });

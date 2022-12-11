@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev": "nr build -w",
     "build": "rollup -c rollup.config.ts --configPlugin typescript"
   },
   "type": "module",
