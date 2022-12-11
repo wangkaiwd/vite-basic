@@ -1,5 +1,5 @@
 import {defineConfig} from 'vite';
-import react from '@vitejs/plugin-react';
+import react from '@vitejs/plugin-react-swc';
 import {splitVendorChunkPlugin} from 'vite';
 // https://vitejs.dev/config/
 // noinspection JSUnusedGlobalSymbols
@@ -15,12 +15,4 @@ export default defineConfig({
 			},
 		},
 	},
-	build: {
-		rollupOptions: {
-			output: {
-				// sourcemap: true,
-				// manualChunks
-			}
-		}
-	}
 });
