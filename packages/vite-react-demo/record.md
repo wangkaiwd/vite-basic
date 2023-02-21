@@ -4,10 +4,6 @@
 
 As a source code type-checker to find type problem ahead of time.
 
-### How to split chunks to avoid warning
-
-optimize production bundle
-
 ### Dependency pre-bundling
 
 * CommonJS and UMD compatibility

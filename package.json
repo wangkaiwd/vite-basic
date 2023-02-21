@@ -4,9 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "pnpm -F packages/vite-react-demo dev"
-  },
-  "dependencies": {
+    "dev": "pnpm -F ./packages/vite-react-demo dev"
   },
   "devDependencies": {
     "@types/node": "^18.11.9",
