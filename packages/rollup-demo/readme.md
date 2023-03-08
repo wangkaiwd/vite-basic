@@ -1,9 +1,12 @@
 ## Plugin
 
-### Core Plugin
+### Official Plugin
+* [official rollup plugins](https://github.com/rollup/plugins)
 
 Try implement core plugin by myself
 
-* [json](https://github.com/rollup/plugins/tree/master/packages/json)
-* [commonjs](https://github.com/rollup/plugins/tree/master/packages/commonjs)
+* alias: resolveId
+* image: load
+* replace
+* html
 

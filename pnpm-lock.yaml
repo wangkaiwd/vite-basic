@@ -1,10 +1,5 @@
 lockfileVersion: 5.4
 
-patchedDependencies:
-  tsx@3.12.1:
-    hash: abfpwdg5ht6yi3x42wq5mjrs4u
-    path: patches/tsx@3.12.1.patch
-
 importers:
 
   .:
@@ -14,7 +9,7 @@ importers:
       typescript: ^4.6.4
     devDependencies:
       '@types/node': 18.11.10
-      tsx: 3.12.1_abfpwdg5ht6yi3x42wq5mjrs4u
+      tsx: 3.12.1
       typescript: 4.9.3
 
   packages/esbuild-demo:
@@ -2176,7 +2171,7 @@ packages:
     resolution: {integrity: sha512-tGyy4dAjRIEwI7BzsB0lynWgOpfqjUdq91XXAlIWD2OwKBH7oCl/GZG/HT4BOHrTlPMOASlMQ7veyTqpmRcrNA==}
     dev: true
 
-  /tsx/3.12.1_abfpwdg5ht6yi3x42wq5mjrs4u:
+  /tsx/3.12.1:
     resolution: {integrity: sha512-Rcg1x+rNe7qwlP8j7kx4VjP/pJo/V57k+17hlrn6a7FuQLNwkaw5W4JF75tYornNVCxkXdSUnqlIT8JY/ttvIw==}
     hasBin: true
     dependencies:
@@ -2186,7 +2181,6 @@ packages:
     optionalDependencies:
       fsevents: 2.3.2
     dev: true
-    patched: true
 
   /typescript/4.9.3:
     resolution: {integrity: sha512-CIfGzTelbKNEnLpLdGFgdyKhG23CKdKgQPOBc+OUNrkJ2vr+KSzsSV5kq5iWhEQbok+quxgGzrAtGWCyU7tHnA==}

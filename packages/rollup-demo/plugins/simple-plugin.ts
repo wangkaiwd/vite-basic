@@ -2,7 +2,7 @@ import { Plugin } from 'rollup';
 
 const myExample = (): Plugin => ({
   name: 'my-example', // this name will show up in warnings and errors
-  // define a customer resolver
+  // define a custom resolver
   resolveId (source) {
     if (source === 'virtual-module') {
       return source; // this signals that rollup should not ask other plugins or check the file system to find this id
@@ -19,3 +19,12 @@ const myExample = (): Plugin => ({
 });
 
 export default myExample;
+
+// build stages:
+// https://rollupjs.org/javascript-api/#rollup-rollup
+// build:
+// const bundle = await rollup.rollup(inputOptions)
+// output:
+// await Promise.all(outputOptions.map(bundle.write))
+// close:
+// await bundle.close()
