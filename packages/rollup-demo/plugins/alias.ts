@@ -1,8 +1,6 @@
 import type { Plugin } from 'rollup';
+import { objectKeys } from './utils';
 
-const objectKeys = <T extends object> (value: T) => {
-  return Object.keys(value) as (keyof T)[];
-};
 const alias = (config: Record<string, string>): Plugin => {
   const keys = objectKeys(config);
   return {
