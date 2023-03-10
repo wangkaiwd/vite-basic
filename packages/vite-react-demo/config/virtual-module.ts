@@ -5,7 +5,7 @@ function virtualModule (): PluginOption {
   const resolvedVirtualModuleId = '\0' + virtualModuleId;
 
   return {
-    name: 'my-plugin', // required, will show up in warnings and errors
+    name: 'virtual-module', // required, will show up in warnings and errors
     resolveId (id) {
       if (id === virtualModuleId) {
         return resolvedVirtualModuleId;

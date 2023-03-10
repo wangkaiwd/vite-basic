@@ -4,6 +4,7 @@ import { splitVendorChunkPlugin } from 'vite';
 import Inspect from 'vite-plugin-inspect';
 import myPlugin from './config/simple';
 import virtualModule from './config/virtual-module';
+
 // https://vitejs.dev/config/
 // noinspection JSUnusedGlobalSymbols
 export default defineConfig({
