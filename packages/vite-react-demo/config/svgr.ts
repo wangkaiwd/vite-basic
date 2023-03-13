@@ -12,6 +12,7 @@ interface SvgrOptions {
 const svgr = (options?: SvgrOptions): PluginOption => {
   return {
     name: 'svgr',
+    // why can't use load
     async transform (code, id) {
       if (svgReg.test(id)) { // match svg file
         const svgCode = await fsp.readFile(id, { encoding: 'utf-8' });
