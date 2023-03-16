@@ -5,6 +5,7 @@ import Inspect from 'vite-plugin-inspect';
 import myPlugin from './config/simple';
 import virtualModule from './config/virtual-module';
 import svgr from './config/svgr';
+import legacy from '@vitejs/plugin-legacy';
 
 // https://vitejs.dev/config/
 // noinspection JSUnusedGlobalSymbols
@@ -12,10 +13,13 @@ export default defineConfig({
   plugins: [
     react(),
     splitVendorChunkPlugin(),
-    Inspect(),
+    // Inspect(),
     myPlugin(),
     virtualModule(),
-    svgr()
+    svgr(),
+    legacy({
+      targets: ['defaults', 'not IE 11'],
+    })
   ],
   css: {
     preprocessorOptions: {
